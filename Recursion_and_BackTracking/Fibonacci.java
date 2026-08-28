@@ -51,4 +51,12 @@ Complexity	Result
 Time		O(N)
 Space		O(N)
 Technique	Recursion + Memoization
+
+| Approach                   |      Time |    Space |
+| -------------------------- | --------: | -------: |
+| Recursion only             | **O(2ⁿ)** |     O(n) |
+| Recursion + DP             |  **O(n)** | **O(n)** |
+| Iterative DP               |  **O(n)** |     O(n) |
+| Iterative with 2 variables |  **O(n)** | **O(1)** |
+
 */
