@@ -5,7 +5,7 @@ Given a number n, generate all possible n pairs of balanced parentheses. A balan
 ​Input Format
 	The input contains a single integer n.
 ​Output Format
-	Generate all combinations of n pairs of balanced parentheses. 		Printing of the brackets will be done by the main function.
+	Generate all combinations of n pairs of balanced parentheses. Printing of the brackets will be done by the main function.
 ​Constraints
     • 1 ≤ n ≤ 10 
 Input

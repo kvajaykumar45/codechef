@@ -99,6 +99,8 @@ static int getPascalElement(int N, int M) {
     }
     return row[M];
 }
+
+
 /*
 Time: O(N^2)
 Space: O(N) 
