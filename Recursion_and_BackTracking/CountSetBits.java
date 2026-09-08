@@ -20,11 +20,10 @@ Sample Input
 Sample Output
 3
 ​
-Constraints
-    • 0 ≤ N ≤ 10^9
+            ​ Constraints
+    • 0 ≤ N ≤ 10^18
     • The solution must use recursion.
     • For N = 0, the number of set bits is 0.
-
 Another Example
 Input
 7
@@ -34,25 +33,31 @@ Explanation: 7 in binary is 111, so it contains 3 set bits.
 */
 //Solution
 
-import java.util.Scanner;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
-class Main
+class Codechef
 {
-    public static void main(String[] args)
-    {
-        Scanner sc = new Scanner(System.in);
+    public static long count = 0;
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+	    long n = sc.nextLong();
+		findCount(n);
+		System.out.println(count);
 
-        int n = sc.nextInt();
-
-        System.out.println(countSetBits(n));
-    }
-
-    static int countSetBits(int n)
-    {
-        if (n == 0)
-            return 0;
-        return (n & 1) + countSetBits(n >> 1);
-    }
+	}
+	public static void findCount(long n)
+	{
+	    if(n == 0)
+	        return;
+	    
+	    if ((n & 1L) == 1L)
+	        count++;
+	     
+	     findCount(n>>1L);
+	}
 }
 
 /*
