@@ -69,4 +69,32 @@ Space Complexity: O(N)
 Thus, the overall space complexity is O(N).
 */
 
+//Solution 2
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Node {
+    String uname;
+    int score;
+    Node(String uname, int score){
+        this.uname = uname;
+        this.score = score;
+    }
+}
+class Codechef {
+	public static void main (String[] args) throws java.lang.Exception{
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		List<Node> map = new ArrayList<>();
+		for(int i=0; i<n; i++){
+		    String uname = sc.next();
+		    int score = sc.nextInt();
+		    map.add(new Node(uname, score));
+		}
+		map.sort((a,b) -> b.score - a.score);
+		for(Node each: map)
+		    System.out.println(each.uname+": "+each.score);
+	}
+}
 
