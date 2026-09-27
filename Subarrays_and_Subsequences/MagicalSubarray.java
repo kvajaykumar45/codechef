@@ -51,3 +51,52 @@ Time: O(n^2)
 Space: O(1)
 */
 
+
+//Optimized Solution
+
+   public static int maxProductSubarray(int[] arr) {
+      
+       int max = arr[0];
+       int min = arr[0];
+       int ans = arr[0];
+       
+       for(int i=1; i<arr.length; i++)
+       {
+        int x = arr[i]; 
+        int oldmax = max;
+        int oldmin = min;
+        
+        max = Math.max(x, Math.max(oldmax * x, oldmin * x));
+        min = Math.min(x, Math.min(oldmax * x, oldmin * x));
+        
+        ans = Math.max(ans, max);
+       }
+       return ans; 
+   }
+
+
+
+/*			Brute Force		Optimized
+Time			O(n²)	 		O(n)
+Extra Space		O(1)			O(1)
+Input Array		O(n)			O(n)
+Total Space		O(n)			O(n)
+
+Main idea	Check every subarray	Process each element once
+Loops		Nested loops		Single loop
+
+ With n = 20,000
+Brute force: O(n²)
+≈ 20,000 × 20,000
+≈ 400 million operations
+
+Optimized: O(n)
+≈ 20,000 operations
+So the big improvement is time, not space.
+
+Brute force     O(n²)  →  O(400 million)
+Optimized       O(n)   →  O(20 thousand)
+
+Both use only a few variables in addition to the input array, so both have O(1) auxiliary space.
+*/
+
