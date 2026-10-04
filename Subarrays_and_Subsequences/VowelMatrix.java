@@ -2,7 +2,7 @@
 THE VOWEL MATRIX
 
 Welcome to The Mega City! Neo finds himself in a high-stakes situation. He has a string S of length N and his task is to crack the string using the vowel matrix. The vowel matrix is a unique cryptographic scheme where the string is sliced into multiple pieces, such that, each piece contains exactly K vowels.
-Determine the number of ways you can slice the string S using vowel matrix scheme. Since the number can be huge, print it modulo 109+7.
+Determine the number of ways you can slice the string S using vowel matrix scheme. Since the number can be huge, print it modulo 10^9+7.
 Note:
     • The characters a, e, i, o, and u are considered vowels in lowercase english alphabets. 
     • It is guaranteed that S contains at least one vowel and the number of vowels in S is a multiple of K. 
