@@ -14,8 +14,9 @@ Input Format
         ◦ The second line contains the string S, consisting of lowercase english letters. 
 
 Output Format
-For each test case, output on a single line, the number of ways you can slice the string S using vowel matrix scheme. Since the number can be huge, print it modulo 109+7.
-            ​ Constraints
+For each test case, output on a single line, the number of ways you can slice the string S using vowel matrix scheme. Since the number can be huge, print it modulo 10^9+7.
+
+Constraints
     • 1 ≤ T ≤ 10^4 
     • 1 ≤ N ≤ 10^6 
     • 1 ≤ K ≤ N 
