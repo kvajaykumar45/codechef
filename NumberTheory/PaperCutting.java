@@ -1,0 +1,54 @@
+/*
+Paper Cutting
+
+Chef has a square-shaped chart paper with the side length equal to N. He wants to cut out K×K squares from this chart paper.
+
+Find the maximum number of K×K squares he can cut from the entire chart paper.
+Note that, some part of the chart paper might not be a included in any K×K cutout square.
+
+Input Format
+    The first line contains a single integer T — the number of test cases. Then the test cases follow.
+    The first and only line of each test case contains two space-separated integers N and K — the side length of the entire chart paper and the side length of the cutout squares.
+
+Output Format
+For each test case, output on a new line the maximum number of K×K squares Chef can cut from the entire chart paper.
+
+Constraints
+	1≤T≤1000
+	1≤K≤N≤1000
+Input
+3
+5 1
+2 2
+5 2
+	
+Output
+25
+1
+4
+
+*/
+
+
+	
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-- > 0)
+		{
+		    int n = sc.nextInt();
+		    int k = sc.nextInt();
+		    
+		    System.out.println((n/k)*(n/k));
+		}
+
+	}
+}
+
