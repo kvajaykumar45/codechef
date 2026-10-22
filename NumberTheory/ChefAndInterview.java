@@ -41,20 +41,27 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		Scanner sc = new Scanner(System.in);
-		int t = sc.nextInt();
-		while(t-- > 0)
-		{
-		    int n = sc.nextInt();
-		    int sum = 0;
-		    for(int i=1; i<=n; i++)
-		        if(n%i == 0) 
-		        	sum += i;
-		    System.out.println(sum);
-		}
-	}
+
+class Codechef {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        while (t-- > 0) {
+            long n = sc.nextLong();
+            long sum = 0;
+
+            for (long i = 1; i <= n / i; i++) {
+                if (n % i == 0) {
+                    sum += i;
+
+                    if (i != n / i) {
+                        sum += n / i;
+                    }
+                }
+            }
+
+            System.out.println(sum);
+        }
+    }
 }
